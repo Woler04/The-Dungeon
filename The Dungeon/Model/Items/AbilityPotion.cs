@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace The_Dungeon.Model.Items
 {
-    internal class ArmorKit : Item
+    internal class AbilityPotion : Item
     {
-        public ArmorKit()
+        public AbilityPotion()
         {
-            Weight = 10;
+            Weight = 5;
         }
 
         public override void AffectCharacter(Character character)
         {
             base.AffectCharacter(character);
-            character.Armor = character.BaseArmor;
+            character.AbilityPoint += 50;
         }
     }
 }
