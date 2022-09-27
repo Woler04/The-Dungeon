@@ -1,6 +1,6 @@
 ﻿using The_Dungeon.View;
 Console.ForegroundColor = ConsoleColor.Yellow;
-Console.WriteLine("========================= THE SEX CHAMBER =========================");
+Console.WriteLine("========================== D U N G E O N ==========================");
 Console.WriteLine("       JoinParty Faction Class Name");
 Console.WriteLine("       AddItemToPool ItemName");
 Console.WriteLine("       PickUpItem Name");
