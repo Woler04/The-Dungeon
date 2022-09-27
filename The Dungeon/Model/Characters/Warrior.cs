@@ -22,12 +22,12 @@ namespace The_Dungeon.Model.Characters
 
             if (!character.IsAlive)
             {
-                throw new ArgumentException($"{character.Name} is already dead...");
+                Console.WriteLine($"{character.Name} is already dead...");
             }
             
             if (Faction == character.Faction)
             {
-                throw new ArgumentException($"Friendly fire! Both characters are from {Faction} faction!");
+                Console.WriteLine($"Friendly fire! Both characters are from {Faction} faction!");
             }
 
             character.TakeDamage(AbilityPoint);

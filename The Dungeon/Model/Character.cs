@@ -68,6 +68,10 @@
                     this.health = 0;
                     IsAlive = false;
                 }
+                if (value > baseHealth)
+                {
+                    this.health = baseHealth;
+                }
             }
         }
 
@@ -119,17 +123,28 @@
                 hitPoints -= BaseArmor;
                 Health -= Math.Abs(hitPoints);
             }
-            
         }
 
         public void Rest()
         {
+            float temp = Health;
             Health += baseHealth * RestHealMultiplier;
+            Console.WriteLine($"{Name}'s HP: {temp} > {Health}");
         }
 
         public void UseItem(Item itemToUse)
         {
             bag.GetItem(itemToUse.GetType().Name).AffectCharacter(this);
+        }
+
+        public void UseItemOn(Item itemToUse, Character character)
+        {
+            if (!character.isAlive)
+            {
+                Console.WriteLine($"{character.Name} is deadass, gone, kicked the bucket");
+            }
+
+            bag.GetItem(itemToUse.GetType().Name).AffectCharacter(character);
         }
 
         public void GiveCharacterItem(Item itemToGive, Character character)
