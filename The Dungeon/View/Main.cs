@@ -17,8 +17,8 @@ namespace The_Dungeon.View
         }
 
         /*
-JoinParty Cock Warrior Woler
-JoinParty Balls Warrior Mart
+JoinParty CSharp Warrior Woler
+JoinParty Java Warrior Mart
 AddItemToPool PoisonPotion
 PickUpItem Woler
 GetStats
